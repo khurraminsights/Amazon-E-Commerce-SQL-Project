@@ -8,175 +8,123 @@ The interactive Power BI dashboard used to report and explore sales trends can b
 
 ---
 
-## Business Context  
+# 🛒 Amazon E-Commerce SQL & Power BI Analysis
 
-### What This Dashboard Is About  
-This dashboard provides an **executive-level overview** of Amazon’s e-commerce performance. It tracks revenue, profit, orders, customers, order value, profit margin, sales trends, top products, product profitability, and regional performance.  
-
-It is designed to help leadership quickly understand **how the business is performing**, which products and regions are driving results, and where profitability can be improved.
-
-### What Business Problem It Solves  
-- No single view of overall sales and profit performance  
-- Difficulty identifying **high-margin vs high-volume products**  
-- Limited insight into **regional market performance**  
-- Challenges in tracking **month-over-month growth trends**  
-- Lack of clarity on which categories contribute most to profitability  
-
-This dashboard centralizes all key business metrics to support **faster, data-driven decisions**.
+> **Role:** Data Analyst | **Tools:** SQL Server · Power BI · DAX · Power Query | **Domain:** E-Commerce · Retail Analytics
 
 ---
 
-## KPIs Summary  
+## 📌 Project Overview
 
-### Key KPIs Displayed  
-
-- **Total Revenue:** $1.2M  
-  → Total income generated from sales  
-
-- **Total Profit:** $250K  
-  → Net earnings after costs  
-
-- **Total Orders:** 5.4K  
-  → Total number of transactions  
-
-- **Total Customers:** 3.2K  
-  → Unique customers served  
-
-- **Average Order Value (AOV):** $220  
-  → Average revenue per order  
-
-- **Average Profit Margin:** 20.8%  
-  → Overall business profitability  
-
-- **Month-over-Month Growth:**  
-  - Revenue: +12%  
-  - Profit: +12%  
-  - Orders: +12%  
-  - Customers: –5%  
-  - AOV: +15%  
-  - Profit Margin: –2.8%  
-
-### What These Numbers Indicate  
-
-- The business is **growing strongly** in revenue, profit, and orders  
-- Customer count has slightly declined, but higher AOV is offsetting it  
-- Profit margin has dipped slightly, indicating **rising costs or discount pressure**  
-- Overall financial health is **positive but needs margin optimization**
+Designed and analyzed a complete Amazon-style e-commerce database to solve critical business challenges around revenue visibility, product profitability, and regional performance. The project delivers an **executive-level Power BI dashboard** backed by **advanced SQL queries**, translating raw transactional data into actionable business intelligence.
 
 ---
 
-## Visual-Wise Insights  
+## 🎯 Business Problem
 
-### A) Monthly Sales Trend (Last 12 Months)  
-**What it shows:**  
-Sales growth trend from January to December  
+Leadership had no single view of overall sales and profit performance. Key challenges included:
 
-**Key Insight:**  
-Sales show a steady upward trend with a sharp dip in November and a strong rebound in December  
-
-**Business Implication:**  
-There is clear seasonality. Inventory and marketing should be planned to **maximize peak months** and stabilize weaker periods.
+- No visibility into which products were **high-margin vs high-volume**
+- Limited insight into **regional market performance**
+- No way to track **month-over-month growth trends**
+- Unclear which **categories contributed most** to profitability
 
 ---
 
-### B) Top 5 Best-Selling Products (by Quantity)  
-**What it shows:**  
-Highest-volume products sold  
+## 📊 Key KPIs Delivered
 
-**Key Insight:**  
-Wireless Headphones lead sales, followed by 4K TVs and Smartphones  
-
-**Business Implication:**  
-These products are key revenue drivers and should be prioritized for **stock availability, promotions, and bundling**.
-
----
-
-### C) Product & Profitability Insights (Table)  
-**What it shows:**  
-Revenue, cost, profit, and margin by product  
-
-**Key Insight:**  
-Some products generate high revenue but lower margins, while others have strong margins but lower sales volume  
-
-**Business Implication:**  
-Product pricing and sourcing strategies need optimization to **improve overall profitability**.
+| Metric | Value |
+|---|---|
+| Total Revenue | $1.2M |
+| Total Profit | $250K |
+| Total Orders | 5,400+ |
+| Total Customers | 3,200+ |
+| Avg Order Value | $220 |
+| Profit Margin | 20.8% |
+| MoM Revenue Growth | +12% |
+| MoM Profit Growth | +12% |
+| MoM Customer Change | -5% |
+| Profit Margin Change | -2.8% |
 
 ---
 
-### D) Highest Profit Margin Products  
-**What it shows:**  
-Products ranked by profit margin  
+## 🔍 Key Findings
 
-**Key Insight:**  
-4K Televisions and Gaming Consoles have the highest profit margins  
-
-**Business Implication:**  
-Marketing spend should be shifted toward **high-margin products** to maximize profit.
-
----
-
-### E) Profit by Category (Donut Chart)  
-**What it shows:**  
-Profit contribution by category  
-
-**Key Insight:**  
-Electronics dominates profitability, followed by Home & Kitchen  
-
-**Business Implication:**  
-Category-level investments should focus on **Electronics** while improving margins in weaker categories.
+- **Electronics** is the most profitable category, dominating overall profit contribution
+- **Wireless Headphones** are the #1 best-selling product by quantity
+- **North America contributes 60%+** of total sales — USA and Canada lead all regions
+- **Profit margin declined 2.8% MoM** — signals rising costs or discount pressure requiring immediate review
+- **4K TVs and Gaming Consoles** have the highest profit margins — ideal for increased marketing investment
+- Clear **seasonality pattern** detected: sharp dip in November, strong rebound in December
+- **Emerging markets** (India and Japan) show untapped growth potential
 
 ---
 
-### F) Regional Performance (Map)  
-**What it shows:**  
-Sales and margin performance by country  
+## 💡 Business Recommendations
 
-**Key Insight:**  
-The USA and Canada dominate total sales and profit  
-
-**Business Implication:**  
-North America is the strongest market and should receive **priority in expansion and marketing**.
-
----
-
-### G) Regional Sales Comparison (Bar Chart)  
-**What it shows:**  
-Revenue comparison across countries  
-
-**Key Insight:**  
-The USA leads revenue, followed by Canada and Germany  
-
-**Business Implication:**  
-Emerging markets like India and Japan offer **growth opportunities** with targeted strategies.
+| Area | Recommendation |
+|---|---|
+| Product Strategy | Shift marketing spend toward 4K TVs and Gaming Consoles (highest margin) |
+| Cost Control | Optimize pricing and supplier costs for low-margin, high-volume products |
+| Market Expansion | Launch targeted campaigns in India and Japan |
+| Customer Retention | Investigate and reverse the -5% MoM customer count decline |
+| Revenue Growth | Bundle top products to increase Average Order Value |
+| Inventory Planning | Align stock levels with seasonal peaks to avoid stockouts |
 
 ---
 
-## Top 5 Key Insights  
+## 🛠️ Technical Approach
 
-- 📈 Revenue and profit both increased by **12% month-over-month**  
-- 💰 Electronics is the **most profitable category**  
-- 🏆 Wireless Headphones are the **top-selling product**  
-- 🌍 North America contributes **over 60% of total sales**  
-- ⚠ Profit margin declined by **2.8%**, indicating cost pressure  
+### SQL Server
+- Full database schema design with **ER Diagram**
+- **JOINs** across customers, orders, products, and regions tables
+- **Aggregations** for revenue, profit, and margin by category and region
+- **Window Functions** for MoM growth tracking and rankings
+- **CTEs** for modular, readable query logic
+- **Subqueries** for Pareto analysis and high-value customer segmentation
 
----
-
-## Business Recommendations  
-
-- Increase marketing investment in **high-margin products** (4K TVs, Gaming Consoles)  
-- Optimize pricing and supplier costs for **low-margin, high-volume products**  
-- Launch targeted campaigns in **India and Japan** for growth  
-- Improve customer retention to reverse the **decline in total customers**  
-- Bundle top products to increase **average order value**  
-- Plan inventory around **seasonal peaks** to avoid stockouts  
+### Power BI
+- **Star schema** data model for optimized performance
+- **DAX measures** for KPIs, MoM growth, and profit margin calculations
+- **Interactive slicers** for category, region, and time period filtering
+- **Drill-through pages** for product and regional deep-dive analysis
+- **Executive summary page** designed for stakeholder presentation
 
 ---
 
-## Executive Summary  
-
-This dashboard shows that the business is performing strongly, with total revenue reaching $1.2M and profit standing at $250K. Sales, profit, and orders all grew by 12% compared to last month, indicating healthy business momentum. Electronics is the most profitable category, and Wireless Headphones are the top-selling product. Regionally, North America dominates total sales, with the USA and Canada leading revenue contribution.
-
-However, the profit margin has declined slightly, which suggests rising costs or pricing pressure. While average order value has increased, the total number of customers has dropped, indicating a need to focus on customer retention. To sustain long-term growth, the company should prioritize high-margin products, optimize low-margin segments, expand into emerging markets, and improve customer loyalty strategies.
+## 📁 Repository Structure
+```
+📂 Amazon-E-Commerce-SQL-Project
+├── 📄 AmazonEcommerce.sql         — Full SQL scripts (schema + queries)
+├── 📊 Amazon Power BI Dashboard   — Interactive .pbix dashboard file
+├── 🖼️  ER Diagram                  — Entity Relationship Diagram
+└── 📄 README.md                   — Project documentation
+```
 
 ---
 
+## 🚀 How to Run
+
+1. Open **SQL Server Management Studio**
+2. Run `AmazonEcommerce.sql` to create and populate the database
+3. Open the **Power BI** file and connect to your SQL Server instance
+4. Use slicers and drill-through filters to explore all insights
+
+---
+
+## 📸 Dashboard Preview
+
+![Amazon Power BI Dashboard](Amazon%20Power%20BI%20Dashboard.png)
+
+---
+
+## 👤 About
+
+**Khurram Naveed** — Data Analyst specializing in SQL, Power BI, and business intelligence.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/khurramnaveed3233)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)](https://github.com/Khurramnaveed3233)
+
+---
+
+> 💼 *This project demonstrates end-to-end data analyst skills: database design, advanced SQL querying, Power BI dashboard development, and business-focused insight storytelling.*

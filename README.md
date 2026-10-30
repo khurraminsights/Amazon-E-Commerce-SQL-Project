@@ -2,6 +2,8 @@
 
 # Amazon E-Commerce | SQL & Power BI Analytics
 
+<img width="2244" height="701" alt="E-Commerce Analytics Dashboard Banner" src="https://github.com/user-attachments/assets/a43b9764-2cc3-4df6-b903-e91fa8d46469" />
+
 ### Sales Performance · Product Profitability · Customer Insights · Regional Intelligence
 
 ![SQL Server](https://img.shields.io/badge/SQL_Server-T--SQL-CC2927?style=for-the-badge)
@@ -86,7 +88,8 @@ A sales total alone cannot explain business performance. Decision-makers also ne
 
 ### Dashboard showcase
 
-![Amazon E-Commerce Business Overview, Product Profitability and Regional Performance](assets/amazon-dashboard-overview.jpg)
+<img width="2816" height="1536" alt="537405652-3503b41d-66fb-4baf-8e3" src="https://github.com/user-attachments/assets/c7050186-2d64-4fdf-b270-6e6ede0dcee2" />
+
 
 *The supplied image combines three dashboard views. It serves as a portfolio visual reference; displayed KPI values have not been independently validated against SQL outputs.*
 

@@ -1,130 +1,303 @@
-# Amazon E-Commerce SQL & Power BI Analysis Project
+<div align="center">
 
-<img width="960" height="540" alt="Amazon sql" src="https://github.com/user-attachments/assets/00377ef8-bc69-4225-a118-fe1691684ae6" />
+# Amazon E-Commerce | SQL & Power BI Analytics
 
-The interactive Power BI dashboard used to report and explore sales trends can be found here:  
+### Sales Performance · Product Profitability · Customer Insights · Regional Intelligence
 
-<img width="2816" height="1536" alt="Amazon Power BI Dashboard" src="https://github.com/user-attachments/assets/3503b41d-66fb-4baf-8e3a-a404f8c36b4e" />
+![SQL Server](https://img.shields.io/badge/SQL_Server-T--SQL-CC2927?style=for-the-badge)
+![Power BI](https://img.shields.io/badge/Power_BI-Business_Intelligence-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Analytics](https://img.shields.io/badge/Analytics-E--Commerce-1476A8?style=for-the-badge)
+![Portfolio](https://img.shields.io/badge/Project-Portfolio_Case_Study-202C45?style=for-the-badge)
 
----
+**A business-focused e-commerce analytics portfolio project combining SQL analysis with Power BI reporting to explore sales, customer value, product performance and regional opportunities.**
 
-# 🛒 Amazon E-Commerce SQL & Power BI Analysis
+[Business Problem](#business-problem) · [Dashboard](#power-bi-dashboard) · [SQL Questions](#sql-business-questions) · [Insights](#analytical-observations) · [Recommendations](#business-recommendations)
 
-> **Role:** Data Analyst | **Tools:** SQL Server · Power BI · DAX · Power Query | **Domain:** E-Commerce · Retail Analytics
+</div>
 
----
-
-## 📌 Project Overview
-
-Designed and analyzed a complete Amazon-style e-commerce database to solve critical business challenges around revenue visibility, product profitability, and regional performance. The project delivers an **executive-level Power BI dashboard** backed by **advanced SQL queries**, translating raw transactional data into actionable business intelligence.
-
----
-
-## 🎯 Business Problem
-
-Leadership had no single view of overall sales and profit performance. Key challenges included:
-
-- No visibility into which products were **high-margin vs high-volume**
-- Limited insight into **regional market performance**
-- No way to track **month-over-month growth trends**
-- Unclear which **categories contributed most** to profitability
+> **Independent portfolio project.** “Amazon” is used as the business theme of this case study, not as evidence of employment, sponsorship or access to Amazon internal systems. Figures in the supplied dashboard are presented as *dashboard illustrations* and have not been reconciled against underlying source data in this review.
 
 ---
 
-## 📊 Key KPIs Delivered
+## Executive Summary
 
-| Metric | Value |
-|---|---|
-| Total Revenue | $1.2M |
-| Total Profit | $250K |
-| Total Orders | 5,400+ |
-| Total Customers | 3,200+ |
-| Avg Order Value | $220 |
-| Profit Margin | 20.8% |
-| MoM Revenue Growth | +12% |
-| MoM Profit Growth | +12% |
-| MoM Customer Change | -5% |
-| Profit Margin Change | -2.8% |
+E-commerce teams need to understand where revenue originates, which products are truly profitable, what customers buy repeatedly, and how demand differs across regions.
 
----
+This project connects **SQL-based investigation** with a **multi-view Power BI dashboard** to answer those questions. The SQL presentation includes product, customer, review, wishlist, discount, time-series, profit and geography analyses. The supplied Power BI design presents three major reporting areas: executive overview, product profitability and regional performance.
 
-## 🔍 Key Findings
+**My role:** Data Analyst  
+**Tools represented:** SQL and Power BI  
+**Industry:** E-commerce / retail analytics  
+**Business outcome:** An analytical reporting concept and portfolio case study, rather than a verified deployed solution.
 
-- **Electronics** is the most profitable category, dominating overall profit contribution
-- **Wireless Headphones** are the #1 best-selling product by quantity
-- **North America contributes 60%+** of total sales — USA and Canada lead all regions
-- **Profit margin declined 2.8% MoM** — signals rising costs or discount pressure requiring immediate review
-- **4K TVs and Gaming Consoles** have the highest profit margins — ideal for increased marketing investment
-- Clear **seasonality pattern** detected: sharp dip in November, strong rebound in December
-- **Emerging markets** (India and Japan) show untapped growth potential
+### What I worked on
+
+- Framed business questions around sales, products, customers, discounts and regional performance.
+- Used SQL analytical approaches to rank and aggregate business activity.
+- Organized KPIs and visual narratives for Power BI reporting.
+- Interpreted product profitability and customer-spend patterns.
+- Identified areas where reporting definitions and data validation should be strengthened.
 
 ---
 
-## 💡 Business Recommendations
+## Business Problem
 
-| Area | Recommendation |
-|---|---|
-| Product Strategy | Shift marketing spend toward 4K TVs and Gaming Consoles (highest margin) |
-| Cost Control | Optimize pricing and supplier costs for low-margin, high-volume products |
-| Market Expansion | Launch targeted campaigns in India and Japan |
-| Customer Retention | Investigate and reverse the -5% MoM customer count decline |
-| Revenue Growth | Bundle top products to increase Average Order Value |
-| Inventory Planning | Align stock levels with seasonal peaks to avoid stockouts |
+A sales total alone cannot explain business performance. Decision-makers also need to know:
 
----
-
-## 🛠️ Technical Approach
-
-### SQL Server
-- Full database schema design with **ER Diagram**
-- **JOINs** across customers, orders, products, and regions tables
-- **Aggregations** for revenue, profit, and margin by category and region
-- **Window Functions** for MoM growth tracking and rankings
-- **CTEs** for modular, readable query logic
-- **Subqueries** for Pareto analysis and high-value customer segmentation
-
-### Power BI
-- **Star schema** data model for optimized performance
-- **DAX measures** for KPIs, MoM growth, and profit margin calculations
-- **Interactive slicers** for category, region, and time period filtering
-- **Drill-through pages** for product and regional deep-dive analysis
-- **Executive summary page** designed for stakeholder presentation
+1. Which products drive **unit volume**, and are those also the most profitable?
+2. Who are the highest-spending customers?
+3. What do product ratings, reviews and wishlists suggest about demand?
+4. How do discounts change reported sales value?
+5. Which products have weak sales or thin margins?
+6. How do revenue and profit vary by month and region?
+7. Which product categories contribute most to profit?
+8. How do selling prices relate to quantity sold?
 
 ---
 
-## 📁 Repository Structure
-```
-📂 Amazon-E-Commerce-SQL-Project
-├── 📄 AmazonEcommerce.sql         — Full SQL scripts (schema + queries)
-├── 📊 Amazon Power BI Dashboard   — Interactive .pbix dashboard file
-├── 🖼️  ER Diagram                  — Entity Relationship Diagram
-└── 📄 README.md                   — Project documentation
+## Analytical Workflow
+
+```text
+        E-COMMERCE BUSINESS DATA
+     Products | Orders | Customers
+        Reviews | Wishlists | Costs
+                    |
+               SQL ANALYSIS
+                    |
+       +------------+-------------+
+       |            |             |
+    Sales &      Customers     Product &
+    Trends       & Demand      Profitability
+       |            |             |
+       +------------+-------------+
+                    |
+             POWER BI REPORT
+                    |
+      Executive | Product | Region
+                    |
+        BUSINESS INTERPRETATION
 ```
 
----
-
-## 🚀 How to Run
-
-1. Open **SQL Server Management Studio**
-2. Run `AmazonEcommerce.sql` to create and populate the database
-3. Open the **Power BI** file and connect to your SQL Server instance
-4. Use slicers and drill-through filters to explore all insights
+*Conceptual workflow. The supplied presentation includes a database-diagram slide; exact table keys and production relationships should be confirmed from the underlying SQL/database files.*
 
 ---
 
-## 📸 Dashboard Preview
+## Power BI Dashboard
 
-![Amazon Power BI Dashboard](Amazon%20Power%20BI%20Dashboard.png)
+### Dashboard showcase
+
+![Amazon E-Commerce Business Overview, Product Profitability and Regional Performance](assets/amazon-dashboard-overview.jpg)
+
+*The supplied image combines three dashboard views. It serves as a portfolio visual reference; displayed KPI values have not been independently validated against SQL outputs.*
+
+### Page 1 — Executive Overview
+
+**Goal:** Give decision-makers a concise view of commercial performance.
+
+**Displayed KPIs**
+- Total revenue
+- Total profit
+- Total orders
+- Total customers
+- Average order value
+- Average profit margin
+
+**Visuals and controls**
+- Monthly sales trend
+- Top-selling products by quantity
+- Date range, category and region filters
+- Navigation to sales, product, customer and regional analysis
+
+### Page 2 — Product & Profitability Insights
+
+**Goal:** Separate high-selling products from high-profit products.
+
+**Displayed analysis**
+- Product-level revenue, cost, profit and margin
+- Highest-margin products
+- Profit by product category
+
+**Decision use:** Compare commercial volume with profitability to guide assortment, pricing and promotion reviews.
+
+### Page 3 — Regional Performance
+
+**Goal:** Compare performance across geographic markets.
+
+**Displayed analysis**
+- Geographic sales distribution map
+- Regional sales comparison chart
+- Cross-market performance view
+
+**Decision use:** Investigate which regions merit closer analysis, taking into account market coverage and underlying transaction volume.
+
+> **Quality note:** Several values and labels in the supplied composite image appear inconsistent or hard to reconcile (including unit labels, repeated geography names and some financial table figures). They should be corrected in Power BI before the screenshot is presented as a validated financial report.
 
 ---
 
-## 👤 About
+## SQL Business Questions
 
-**Khurram Naveed** — Data Analyst specializing in SQL, Power BI, and business intelligence.
+The supplied presentation contains the following analytical questions. They are consolidated below by topic; duplicate questions from the slides are identified rather than counted as separate unique analyses.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/khurramnaveed3233)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)](https://github.com/Khurramnaveed3233)
+| Area | SQL analysis | Intended business use |
+|---|---|---|
+| **Sales volume** | Top 5 products by quantity sold | Identify high-volume products |
+| **Customer value** | Top 5 customers by total spend | Understand revenue concentration |
+| **Customer feedback** | Average product rating | Monitor perceived product quality |
+| **Demand signals** | Top 5 most-wishlisted products | Explore interest beyond completed purchases |
+| **Discounts** | Sales before vs. after discounts | Evaluate price reductions and net sales |
+| **Underperformers** | Products below a sales-volume threshold | Investigate low-demand inventory |
+| **Regional sales** | Sales by city or country | Compare market performance |
+| **Time series** | Monthly sales in the past 12 months | Identify change and seasonality |
+| **Profitability** | Profit by product | Measure revenue less recorded cost |
+| **Customer value** | Total customer spend over time | Describe historical customer value |
+| **Margins** | Highest profit-margin products | Compare relative profitability |
+| **Price vs. demand** | Product price and quantity sold | Explore association, not causation |
+| **Review quality** | Average rating and review counts | Compare feedback volume and score |
+| **Category profit** | Total profit by category | Identify categories contributing profit |
+
+**Slide note:** The PowerPoint numbers business questions as 1–12 and 14–18, skipping 13, and repeats monthly and regional sales questions. This README groups them into **14 distinct analytical themes** without claiming 18 independently verified queries.
 
 ---
 
-> 💼 *This project demonstrates end-to-end data analyst skills: database design, advanced SQL querying, Power BI dashboard development, and business-focused insight storytelling.*
+## SQL Analytical Methodology
+
+These are techniques appropriate to the project questions. The PowerPoint does not expose enough executable query text to verify every exact statement.
+
+| Technique | Typical application |
+|---|---|
+| `SUM()` and `COUNT()` | Revenue, orders, units and customers |
+| `AVG()` | Ratings and mean order values |
+| `GROUP BY` | Category, product, region and month breakdowns |
+| `ORDER BY` and `TOP` | Top products, customers and margins |
+| JOINs | Combine products, transactions, customers and reviews |
+| Date functions | Monthly reporting and 12-month filtering |
+| Calculated expressions | Discounts, profit and margin |
+| Conditional filtering | Low sales, category selection and periods |
+
+### Key metric definitions to validate
+
+| KPI | Recommended definition |
+|---|---|
+| **Gross sales** | Sum of transaction value before discounts |
+| **Net sales** | Gross sales minus applicable discounts and adjustments |
+| **Profit** | Net sales minus defined cost components |
+| **Profit margin %** | Profit ÷ net sales × 100, when net sales is nonzero |
+| **Average order value** | Net sales ÷ distinct orders |
+| **Historical customer spend** | Sum of recognized net sales per customer |
+| **Customer lifetime value** | Requires a defined period and/or predictive model; historical spend alone is not predictive CLV |
+
+### Example analysis pattern: product profitability
+
+```sql
+-- Illustrative T-SQL template; map fields to the real schema.
+SELECT
+    ProductID,
+    SUM(NetSales) AS NetRevenue,
+    SUM(CostAmount) AS TotalCost,
+    SUM(NetSales - CostAmount) AS Profit,
+    100.0 * SUM(NetSales - CostAmount)
+        / NULLIF(SUM(NetSales), 0) AS ProfitMarginPct
+FROM SalesFact
+GROUP BY ProductID
+ORDER BY Profit DESC;
+```
+
+The example uses **illustrative** `SalesFact` and column names; these were **not verified against the presentation's schema**. Actual SQL files should determine the exact query.
+
+---
+
+## Analytical Observations
+
+The supplied dashboard illustrates these areas:
+
+**Sales performance:** A monthly trend and top-products chart provide a starting point for examining seasonality and sales concentration.
+
+**Product profitability:** Product-level revenue, cost and profit views help distinguish volume from margin performance.
+
+**Regional comparison:** A map and market comparison chart support geographic analysis, but the image alone cannot establish actual company market shares.
+
+**Customer and demand analytics:** The SQL-question set extends beyond revenue into reviews, wishlists and customer spend. The supplied dashboard composite does not provide a complete customer-detail page, so those findings should be supported with SQL results or additional Power BI screenshots.
+
+**Important:** Exact numerical claims such as total revenue, growth percentages, profit margin and market concentration should be treated as unverified until reconciled with the database and Power BI measures.
+
+---
+
+## Business Recommendations
+
+| Opportunity | Suggested action | Metric to monitor |
+|---|---|---|
+| **High-volume products** | Compare stock availability with sales volume | Units sold, stockouts |
+| **Low-margin products** | Review pricing, discounts and attributable costs | Profit margin % |
+| **High-value customers** | Examine repeat purchasing and retention opportunities | Repeat rate, customer spend |
+| **Wishlisted products** | Compare customer interest with conversions | Wishlist-to-purchase rate |
+| **Regional performance** | Investigate market-level differences before allocating campaigns | Net sales, orders and margin by region |
+| **Customer feedback** | Examine low-rating products with sufficient review counts | Rating, reviews, returns |
+| **Monthly volatility** | Compare promotions, seasonality and product mix | Monthly net sales and growth |
+
+These are business proposals informed by the report's analytical structure, **not measured improvements attributed to the project**.
+
+---
+
+## Validation & Reporting Improvements
+
+Before positioning the dashboard as a final decision-support report:
+
+- [ ] Verify SQL table names, primary keys and relationships against the database.
+- [ ] Reconcile SQL revenue, profit, order and customer totals with Power BI.
+- [ ] Clearly distinguish gross sales, net sales, profit and margin.
+- [ ] Correct inconsistent financial units and regional labels in the dashboard.
+- [ ] Ensure all filters affect the intended visuals.
+- [ ] Confirm Top 5 logic uses the correct measure and tie handling.
+- [ ] Show a clear time period for monthly trends.
+- [ ] Validate customer spend vs. lifetime value terminology.
+- [ ] Include actual SQL scripts and a reproducible data dictionary.
+- [ ] Publish revised screenshots generated directly from Power BI Desktop.
+
+---
+
+## Technical Competencies
+
+**SQL Analytics:** filtering, aggregations, ranking, joining transactional tables, calculations, time-based reporting and product analysis.
+
+**Power BI:** KPI cards, line and bar charts, product profitability tables, region maps, filters and report navigation.
+
+**Business Analysis:** defining KPIs, evaluating product performance, interpreting customer activity, identifying reporting limitations and developing practical follow-up questions.
+
+---
+
+## Repository Contents
+
+| Resource | Purpose |
+|---|---|
+| `README.md` | Project story, methods, findings, limitations and recommendations |
+| `assets/amazon-dashboard-overview.jpg` | Supplied Power BI dashboard collage |
+| `AmazonEcommerce.pptx` | SQL business-question walkthrough and database-diagram presentation |
+
+*The presentation and dashboard image are available in the accompanying package. An executable SQL script and PBIX report were not attached in this request; add those original files if available.*
+
+---
+
+## Future Work
+
+1. **SQL reproducibility:** Include the source SQL script, database structure, sample data and validation results.
+2. **Power BI accuracy:** Correct measure definitions, category labels, region names and units.
+3. **Customer analysis:** Add repeat orders, cohort retention and product-review pages where supported by data.
+4. **Documentation:** Publish a data dictionary and explain how each important KPI is calculated.
+5. **Performance:** Review query execution plans and model relationships for larger datasets.
+
+---
+
+<div align="center">
+
+### About the Analyst
+
+**Khurram Naveed**  
+Data Analyst | SQL Server | Power BI | Excel
+
+[![GitHub](https://img.shields.io/badge/GitHub-khurraminsights-181717?style=for-the-badge&logo=github)](https://github.com/khurraminsights)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/khurram-naveed-0083851aa/)
+
+**Business questions → SQL analysis → Power BI reporting → informed decisions**
+
+</div>
+
